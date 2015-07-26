@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>BKS-Easy Communication</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="author" type="text/html" href="https://plus.google.com/+MuazKhan">
+    <meta name="author" content="Muaz Khan">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+
+
+    <!-- webrtc library used for streaming -->
+    <script src="//cdn.webrtc-experiment.com/firebase.js">
+    </script>
+    <script src="//cdn.webrtc-experiment.com/getMediaElement.min.js">
+    </script>
+    <script src="//cdn.webrtc-experiment.com/RTCMultiConnection.js">
+    </script>
+</head>
+
+<body>
+<div class="container">
+<div class="jumbotron">
+
+<h1 style="color:red;text-align:center;">Welcome To BKS</h1>
+
+    <article>
+
+
+    <form role="form">
+	    <div class="form-group">
+		    <label for="sel1">Chia sẻ:</label>
+		    <select class="form-control" id="session" title="Session">
+                <option>audio+video+screen</option>
+                <option selected>audio+video</option>
+                <option>audio+screen</option>
+                <option>video+screen</option>
+                <option>audio</option>
+                <option>video</option>
+                <option>screen</option>
+		    </select> 
+	    </div>
+
+	    <div class="form-group">
+		    <label for="sel1">Chế độ:</label>
+		    <select class="form-control" id="direction" title="Direction">
+				<option>many-to-many</option>
+                <option>one-to-one</option>
+                <option>one-to-many</option>
+                <option>one-way</option>
+		    </select> 
+	    </div>
+
+	    <label for="usr">Tên phòng:</label>
+ 	 	<input type="text" class="form-control" id="session-name">
+
+ 	 	<br>
+
+ 	 	<span>
+            Click vào để tạo kênh riêng ==>
+            <a href="" target="_blank" title="Open this link in new tab. Then your room will be private!">
+                <code>
+                    <strong id="unique-token">#123456789</strong>
+                </code>
+            </a>
+        </span>
+
+        <br>
+
+          <a href="https://chrome.google.com/webstore/detail/screen-capturing/ajhifddimkapgcifgcodmmfdlknahffk">Cài đặt chrome plugin cho desktop sharing</a>
+      <br>
+      <a href="/enable-screen-capturing.xpi">Cài đặt firefox plugin cho desktop sharing</a>
+            <br>
+        <br>
+        <button id="setup-new-session" class="btn btn-primary">Tạo phòng</button>
+
+
+    </form>
+
+    <table class="table" style="width: 100%;" id="rooms-list"></table>
+
+    <div id="videos-container"></div>
+
+
+</div>  
+</div>
+
+    
+
+  <footer class="footer">
+      <div class="container">
+        <p class="text-muted">BKSharing - Developed By TamLe</p>
+      </div>
+    </footer>
+
+    <script src="js/rtc_script.js">
+    </script>
+
+</body>
+
+
+</html>
